@@ -16,6 +16,17 @@
 		F6349DDE2899F7D3004B37BF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F6349DDD2899F7D3004B37BF /* .gitignore */; };
 		F6349DE02899F82D004B37BF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6349DDF2899F82D004B37BF /* SearchViewController.swift */; };
 		F6349DE22899F894004B37BF /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6349DE12899F894004B37BF /* APIKey.swift */; };
+		F6349DE42899FA09004B37BF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6349DE32899FA09004B37BF /* Constant.swift */; };
+		F6349DE92899FAAF004B37BF /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6349DE82899FAAF004B37BF /* Example.swift */; };
+		F6B4E67F289AB26A006C0D52 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B4E67D289AB26A006C0D52 /* MovieCollectionViewCell.swift */; };
+		F6B4E680289AB26A006C0D52 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B4E67E289AB26A006C0D52 /* MovieCollectionViewCell.xib */; };
+		F6B4E682289AB27F006C0D52 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B4E681289AB27F006C0D52 /* MovieModel.swift */; };
+		F6B4E685289AB55A006C0D52 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F6B4E684289AB55A006C0D52 /* Alamofire */; };
+		F6B4E688289AB568006C0D52 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = F6B4E687289AB568006C0D52 /* SwiftyJSON */; };
+		F6B4E68B289AB575006C0D52 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F6B4E68A289AB575006C0D52 /* Kingfisher */; };
+		F6B4E68E289AB5E4006C0D52 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F6B4E68D289AB5E4006C0D52 /* IQKeyboardManagerSwift */; };
+		F6B4E691289AB5FB006C0D52 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = F6B4E690289AB5FB006C0D52 /* TextFieldEffects */; };
+		F6B4E698289AC489006C0D52 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B4E697289AC489006C0D52 /* Key.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +41,12 @@
 		F6349DDD2899F7D3004B37BF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F6349DDF2899F82D004B37BF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F6349DE12899F894004B37BF /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		F6349DE32899FA09004B37BF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		F6349DE82899FAAF004B37BF /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		F6B4E67D289AB26A006C0D52 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6B4E67E289AB26A006C0D52 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		F6B4E681289AB27F006C0D52 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		F6B4E697289AC489006C0D52 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +54,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B4E68B289AB575006C0D52 /* Kingfisher in Frameworks */,
+				F6B4E68E289AB5E4006C0D52 /* IQKeyboardManagerSwift in Frameworks */,
+				F6B4E688289AB568006C0D52 /* SwiftyJSON in Frameworks */,
+				F6B4E685289AB55A006C0D52 /* Alamofire in Frameworks */,
+				F6B4E691289AB5FB006C0D52 /* TextFieldEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,17 +85,63 @@
 		F6349DC82899F6C5004B37BF /* SeSAC Week5 TMDB API */ = {
 			isa = PBXGroup;
 			children = (
+				F6349DE72899FA9F004B37BF /* Resource */,
+				F6349DE62899FA86004B37BF /* Key */,
+				F6B4E692289AB609006C0D52 /* Model */,
+				F6B4E694289AB64A006C0D52 /* View */,
+				F6B4E693289AB60F006C0D52 /* Controller */,
 				F6349DC92899F6C5004B37BF /* AppDelegate.swift */,
 				F6349DCB2899F6C5004B37BF /* SceneDelegate.swift */,
-				F6349DCD2899F6C5004B37BF /* ViewController.swift */,
 				F6349DCF2899F6C5004B37BF /* Main.storyboard */,
 				F6349DD22899F6C6004B37BF /* Assets.xcassets */,
 				F6349DD42899F6C6004B37BF /* LaunchScreen.storyboard */,
 				F6349DD72899F6C6004B37BF /* Info.plist */,
 				F6349DDF2899F82D004B37BF /* SearchViewController.swift */,
 				F6349DE12899F894004B37BF /* APIKey.swift */,
+				F6349DE32899FA09004B37BF /* Constant.swift */,
 			);
 			path = "SeSAC Week5 TMDB API";
+			sourceTree = "<group>";
+		};
+		F6349DE62899FA86004B37BF /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				F6B4E697289AC489006C0D52 /* Key.swift */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		F6349DE72899FA9F004B37BF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F6349DE82899FAAF004B37BF /* Example.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F6B4E692289AB609006C0D52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6B4E681289AB27F006C0D52 /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6B4E693289AB60F006C0D52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6349DCD2899F6C5004B37BF /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6B4E694289AB64A006C0D52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6B4E67D289AB26A006C0D52 /* MovieCollectionViewCell.swift */,
+				F6B4E67E289AB26A006C0D52 /* MovieCollectionViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +160,13 @@
 			dependencies = (
 			);
 			name = "SeSAC Week5 TMDB API";
+			packageProductDependencies = (
+				F6B4E684289AB55A006C0D52 /* Alamofire */,
+				F6B4E687289AB568006C0D52 /* SwiftyJSON */,
+				F6B4E68A289AB575006C0D52 /* Kingfisher */,
+				F6B4E68D289AB5E4006C0D52 /* IQKeyboardManagerSwift */,
+				F6B4E690289AB5FB006C0D52 /* TextFieldEffects */,
+			);
 			productName = "SeSAC Week5 TMDB API";
 			productReference = F6349DC62899F6C5004B37BF /* SeSAC Week5 TMDB API.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +195,13 @@
 				Base,
 			);
 			mainGroup = F6349DBD2899F6C5004B37BF;
+			packageReferences = (
+				F6B4E683289AB55A006C0D52 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F6B4E686289AB568006C0D52 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				F6B4E689289AB575006C0D52 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				F6B4E68C289AB5E4006C0D52 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				F6B4E68F289AB5FB006C0D52 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
 			productRefGroup = F6349DC72899F6C5004B37BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B4E680289AB26A006C0D52 /* MovieCollectionViewCell.xib in Resources */,
 				F6349DDE2899F7D3004B37BF /* .gitignore in Resources */,
 				F6349DD62899F6C6004B37BF /* LaunchScreen.storyboard in Resources */,
 				F6349DD32899F6C6004B37BF /* Assets.xcassets in Resources */,
@@ -149,10 +232,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6349DCE2899F6C5004B37BF /* ViewController.swift in Sources */,
+				F6349DE92899FAAF004B37BF /* Example.swift in Sources */,
+				F6B4E698289AC489006C0D52 /* Key.swift in Sources */,
+				F6B4E682289AB27F006C0D52 /* MovieModel.swift in Sources */,
 				F6349DCA2899F6C5004B37BF /* AppDelegate.swift in Sources */,
 				F6349DE02899F82D004B37BF /* SearchViewController.swift in Sources */,
 				F6349DCC2899F6C5004B37BF /* SceneDelegate.swift in Sources */,
 				F6349DE22899F894004B37BF /* APIKey.swift in Sources */,
+				F6B4E67F289AB26A006C0D52 /* MovieCollectionViewCell.swift in Sources */,
+				F6349DE42899FA09004B37BF /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +396,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,6 +426,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,6 +462,77 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6B4E683289AB55A006C0D52 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		F6B4E686289AB568006C0D52 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		F6B4E689289AB575006C0D52 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		F6B4E68C289AB5E4006C0D52 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+		F6B4E68F289AB5FB006C0D52 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6B4E684289AB55A006C0D52 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6B4E683289AB55A006C0D52 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		F6B4E687289AB568006C0D52 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6B4E686289AB568006C0D52 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		F6B4E68A289AB575006C0D52 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6B4E689289AB575006C0D52 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		F6B4E68D289AB5E4006C0D52 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6B4E68C289AB5E4006C0D52 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		F6B4E690289AB5FB006C0D52 /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6B4E68F289AB5FB006C0D52 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6349DBE2899F6C5004B37BF /* Project object */;
 }
