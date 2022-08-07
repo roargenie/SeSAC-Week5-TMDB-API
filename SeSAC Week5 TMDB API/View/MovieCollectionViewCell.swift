@@ -20,6 +20,16 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var subView: UIView!
     
+    @IBOutlet weak var detailButton: UIButton!
+    
+    @IBOutlet weak var rateLabel: UILabel!
+    
+    @IBOutlet weak var rateNumberLabel: UILabel!
+    
+    @IBOutlet weak var detailViewLabel: UILabel!
+    
+    @IBOutlet weak var detailViewButton: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +37,16 @@ class MovieCollectionViewCell: UICollectionViewCell {
         
         
         
+        
+        
+        
+        
+        
     }
+    
+    
+    
+    
     
     
     
