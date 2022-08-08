@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CastTableViewCell: UITableViewCell {
     
@@ -20,6 +21,7 @@ class CastTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 
@@ -28,5 +30,20 @@ class CastTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setUI(_ data: CastResults) {
+        nameLabel.text = data.name
+        characterLabel.text = data.character
+        
+        let imageURL = "https://image.tmdb.org/t/p/w220_and_h330_face"
+        guard let img = data.profile_path else { return }
+        let image = URL(string: imageURL + img)
+        castImageView.kf.setImage(with: image)
+        castImageView.contentMode = .scaleToFill
+        castImageView.layer.cornerRadius = castImageView.frame.height / 2
+        
+    }
+    
+    
 
 }

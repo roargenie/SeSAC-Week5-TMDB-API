@@ -12,14 +12,13 @@ class APIManagers {
     typealias movieCompletionHandler = (Int, [MovieResults]) -> Void
     typealias genreCompletionHandler = ([Int: String]) -> Void
     typealias castCompletionHandler = ([CastResults]) -> Void
+    typealias videoCompletionHandler = ([VideoResults]) -> Void
     
     func movieRequest(start: Int, completionHandler: @escaping movieCompletionHandler) {
         
-        let url = EndPoint.tmdbURL
+        let url = EndPoint.tmdbURL + "\(APIKey.TMDB)"
         
-        let parameter: Parameters = ["api_key": APIKey.TMDB, "page": start]
-        
-        AF.request(url, method: .get, parameters: parameter).validate().responseDecodable(of: MovieModel.self, queue: .global()) { response in
+        AF.request(url, method: .get).validate().responseDecodable(of: MovieModel.self, queue: .global()) { response in
             switch response.result {
             case .success(let value):
                 let totalCount = value.total_results
@@ -36,11 +35,9 @@ class APIManagers {
     
     func genreRequest(completionHandler: @escaping genreCompletionHandler) {
         
-        let url = EndPoint.genreURL
+        let url = EndPoint.genreURL + "\(APIKey.TMDB)&language=en-US"
         
-        let parameter: Parameters = ["api_key": APIKey.TMDB]
-        
-        AF.request(url, method: .get, parameters: parameter).validate().responseData(queue: .global()) { response in
+        AF.request(url, method: .get).validate().responseData(queue: .global()) { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -63,15 +60,13 @@ class APIManagers {
     
     func castRequest(movie_id: Int, completionHandler: @escaping castCompletionHandler) {
         
-        let url = EndPoint.castURL + "\(movie_id)/credits"
+        let url = EndPoint.castURL + "\(movie_id)/credits?api_key=\(APIKey.TMDB)"
         
-        let parameter: Parameters = ["api_key": APIKey.TMDB]
-        
-        AF.request(url, method: .get, parameters: parameter).validate().responseDecodable(of: CastModel.self, queue: .global()) { response in
+        AF.request(url, method: .get).validate().responseDecodable(of: CastModel.self, queue: .global()) { response in
             switch response.result {
             case .success(let value):
                 let data = value.cast
-                
+                print(data)
                 completionHandler(data)
                 
             case .failure(let error):
@@ -81,10 +76,24 @@ class APIManagers {
         }
     }
     
-    
+    func videoRequest(movie_id: Int, completionHandler: @escaping videoCompletionHandler) {
+        
+        let url = EndPoint.videoURL + "\(movie_id)/videos?api_key=\(APIKey.TMDB)"
+        
+        AF.request(url, method: .get).validate().responseDecodable(of: Video.self, queue: .global()) { response in
+            switch response.result {
+            case .success(let value):
+                let data = value.results
+                completionHandler(data)
+                
+            case .failure(let error):
+                print(error)
+                
+            }
+        }
+        
+    }
 }
-
-
 
 
 
